@@ -1,4 +1,4 @@
 # Blog-App
 A simple Blog CRUD app (WIP)
 
-Just a basic backend for now. I will add the frontend soon.
+Implemented backend and basic frontend. Frontend and backend can both be run with npm.
