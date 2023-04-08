@@ -6,7 +6,8 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
     "start": "cross-env NODE_ENV=production node index.js",
-    "dev": "cross-env NODE_ENV=development nodemon index.js"
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "eslint": "eslint ."
   },
   "author": "billy stewart",
   "license": "ISC",
@@ -22,9 +23,13 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "eslint": "^8.32.0",
+    "eslint": "^8.38.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^29.3.1",
     "nodemon": "^2.0.20",
     "supertest": "^6.3.3"
