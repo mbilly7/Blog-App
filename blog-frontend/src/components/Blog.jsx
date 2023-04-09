@@ -21,7 +21,6 @@ function Blog({ blog, handleLike, handleDelete }) {
         && (
         <div>
           {blog.likes}
-          {' '}
           <button type="button" onClick={() => handleLike(blog)}>like</button>
         </div>
         )}

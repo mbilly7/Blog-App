@@ -80,7 +80,7 @@ function App() {
       setUsername('');
       setPassword('');
 
-      setSuccessMessage(`Successfully logged into user: ${userToLogin.name}`);
+      setSuccessMessage(`Successfully logged into user: ${userToLogin.username}`);
       setTimeout(() => {
         setSuccessMessage(null);
       }, 5000);
@@ -125,6 +125,12 @@ function App() {
         .then(() => {
           setBlogs(blogs
             .filter((currBlog) => currBlog.id !== blog.id));
+        })
+        .catch(() => {
+          setErrorMessage('Blog deletion failed. Make sure that you are logged into the correct user.');
+          setTimeout(() => {
+            setErrorMessage(null);
+          }, 5000);
         });
     }
   };
@@ -187,7 +193,7 @@ function App() {
         && (
         <div>
           <p>
-            {user.name}
+            {user.username}
             {' '}
             logged in
           </p>

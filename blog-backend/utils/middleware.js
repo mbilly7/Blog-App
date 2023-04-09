@@ -15,8 +15,7 @@ const tokenExtractor = (request, response, next) => {
 
   if (authorization && authorization.startsWith('Bearer ')) {
     request.token = authorization.replace('Bearer ', '');
-  }
-  else {
+  } else {
     request.token = null;
   }
 
@@ -47,7 +46,6 @@ const errorHandler = (error, request, response, next) => {
   if (error.name === 'CastError') {
     return response.status(400).send({ error: 'malformatted id' });
   }
-
   if (error.name === 'ValidationError' || error.name === 'MongoServerError' || error.name === 'JsonWebTokenError') {
     return response.status(400).json({ error: error.message });
   }
